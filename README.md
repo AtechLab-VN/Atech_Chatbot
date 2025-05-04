@@ -2,7 +2,7 @@
 
 Một chatbot AI đơn giản với backend FastAPI và frontend React.js, sử dụng Ollama để chạy các mô hình AI cục bộ.
 
-******* Lưu ý: Sử dụng python 3.11
+******* Lưu ý: Sử dụng python 3.11.
 
 ## Cài đặt
 
