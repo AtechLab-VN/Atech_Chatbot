@@ -12,6 +12,8 @@ services:
       - REACT_APP_API_URL=http://backend:8000
     depends_on:
       - backend
+    networks:
+      - my-network
 
   backend:
     build: ./backend
@@ -20,4 +22,22 @@ services:
     volumes:
       - ./backend:/app
     environment:
-      - PYTHONUNBUFFERED=1 
+      - PYTHONUNBUFFERED=1
+    networks:
+      - my-network
+
+  ollama:
+    image: ollama/ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    driver: bridge
+
+volumes:
+  ollama_data:
