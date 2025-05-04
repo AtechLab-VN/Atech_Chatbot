@@ -4,3 +4,4 @@ python-multipart==0.0.6
 sentence-transformers==2.2.2
 pydantic==2.4.2
 python-dotenv==1.0.0
+ollama==0.1.6
